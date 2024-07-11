@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.TechRC.facttech">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:hardwareAccelerated="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FactTech">
+
+
+        <activity android:name="com.TechRC.facttech.Phychology"></activity>
+        <activity android:name="com.TechRC.facttech.Game" />
+        <activity android:name="com.TechRC.facttech.Term_Condition" />
+        <activity android:name="com.TechRC.facttech.About_Us" />
+        <activity android:name="com.TechRC.facttech.RateUs" />
+        <activity android:name="com.TechRC.facttech.Privacy_Policy" />
+        <activity android:name="com.TechRC.facttech.AAMotivationCorner" />
+        <activity android:name="com.TechRC.facttech.DidYouKnow" />
+        <activity android:name="com.TechRC.facttech.SuccesFullPersons" />
+        <activity android:name="com.TechRC.facttech.WorldRecords" />
+        <activity android:name="com.TechRC.facttech.IndianRealLifeHeros" />
+        <activity android:name="com.TechRC.facttech.Technology" />
+        <activity android:name="com.TechRC.facttech.Space" />
+        <activity android:name="com.TechRC.facttech.ForigionMonument" />
+        <activity android:name="com.TechRC.facttech.IndianMonument" />
+        <activity android:name="com.TechRC.facttech.Car" />
+        <activity android:name="com.TechRC.facttech.Plants" />
+        <activity android:name="com.TechRC.facttech.Birds" />
+        <activity android:name="com.TechRC.facttech.AquaticAnimal" />
+        <activity android:name="com.TechRC.facttech.Animal" />
+        <activity android:name="com.TechRC.facttech.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.TechRC.facttech.Appintro" />
+        <activity android:name="com.TechRC.facttech.MainActivity" />
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3196700494551799~6575781286"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>

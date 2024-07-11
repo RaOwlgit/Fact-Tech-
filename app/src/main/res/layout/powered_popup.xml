@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="330dp"
+    android:layout_height="450dp"
+    android:background="#95000000"
+    android:padding="5dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/textclose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:textColor="#ffffff"
+        android:text="X"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:background="@drawable/wrongbg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/vinayak_express" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vinayak Express"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Site is Under Construction !"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="22dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Shoping"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:textSize="10dp" />
+
+
+
+    <TextView
+        android:id="@+id/shop"
+        android:clickable="true"
+        android:autoLink="all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="https://www.vinayakexpress.com"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="8dp"
+        android:textStyle="italic" />
+</LinearLayout>

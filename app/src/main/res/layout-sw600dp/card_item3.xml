@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9">
+
+
+            <ImageView
+                android:id="@+id/movie_image"
+                android:src="@drawable/anim_fact_1"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:text="Fact No-1"
+                android:textSize="30dp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="bottom"
+                android:background="#A0333639"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+
+
+            <io.armcha.elasticview.ElasticView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardBackgroundColor="#9FEF1459"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="50dp"
+                android:layout_gravity="right">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/bookmark"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    app:lottie_rawRes="@raw/bookmark"
+                    tools:ignore="MissingConstraints" />
+
+            </io.armcha.elasticview.ElasticView>
+
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="#FEFDFF"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/movie_hindidescription"
+                    android:layout_below="@+id/movie_description"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/hindi_anim_fact_1"
+                    android:justificationMode="inter_word"
+                    android:textColor="#020202"
+                    android:layout_width="600dp"
+                    android:layout_height="365dp"
+                    android:autoSizeTextType="uniform"/>
+
+                <TextView
+                    android:id="@+id/linkTittle"
+                    android:layout_below="@+id/movie_hindidescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visit Once: "
+                    android:textSize="20sp"
+                    android:textColor="#020202"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/link"
+                    android:layout_below="@+id/linkTittle"
+                    android:clickable="true"
+                    android:autoLink="all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="https://www.vinayakexpress.com"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="2dp"
+                    android:textStyle="italic" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

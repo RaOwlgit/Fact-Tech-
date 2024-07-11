@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0E1019</color>
+    <color name="black">#FF000000</color>
+    <color name="colorPrimaryDark">#0B0A0A</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="primary_color">#F1082A</color>
+    <color name="secondary_color">#C1CD45</color>
+
+    <color name="colortransparent">#00FFFFFF</color>
+
+    <color name="colorGradientStart">#ffffff</color>
+    <color name="colorGradientCenter">#6dd5fa</color>
+    <color name="colorGradientEnd">#2980b9</color>
+
+
+    <color name="colorCardGradientStart">#56ccf2</color>
+    <color name="colorCardGradientCenter">#2f80ed</color>
+    <color name="colorCardGradientEnd">#5b86e5</color>
+
+
+    <color name="dark_one">#dcdcdc</color>
+    <color name="dark_two">#dcdcdc</color>
+    <color name="dark_three">#dcdcdc</color>
+
+
+    <color name="orange_one">#44ABCA</color>
+    <color name="orange_two">#44ABCA</color>
+    <color name="orange_three">#44ABCA</color>
+
+
+    <array name="active">
+        <item>@color/orange_one</item>
+        <item>@color/orange_two</item>
+        <item>@color/orange_three</item>
+    </array>
+
+
+    <array name="inactive">
+        <item>@color/dark_one</item>
+        <item>@color/dark_two</item>
+        <item>@color/dark_three</item>
+    </array>
+
+</resources>

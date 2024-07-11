@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/popup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/dot_button"
+                android:onClick="showPopup"/>
+
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:id="@+id/txtdashboard"
+                android:text="Fact Tech"
+                android:fontFamily="@font/berkshire_swash"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_below="@id/txtdashboard"
+                android:text="16 items"
+                android:textSize="20sp"
+                android:textColor="#032075"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="90dp"
+                android:src="@drawable/mainlogo2" />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@drawable/uplogo"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@drawable/logo"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="35dp" />
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="110dp"
+                android:layout_marginBottom="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_period="2500"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/up_scroll_button"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="390dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/up_arrow"
+            tools:ignore="MissingConstraints" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="4">
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview1"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/animal"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Animal"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview2"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginLeft="15dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/fish"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text=" Aquatic Animal"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview3"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/bird"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Birds"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview4"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="15dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/tree"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plants"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview5"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/car"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Cars"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview6"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="15dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/india"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Indian"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Monuments"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview7"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/building"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Foreign"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Monuments"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview8"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="15dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/space"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Space"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview9"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/robo"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Technology"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview10"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="15dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/heros"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="About"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Indian Real Life"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Heros"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview11"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/record"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="World Records"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview12"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="15dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/bill"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Succes Full"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Persons"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview15"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/game"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Fact about"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Games"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+
+
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview16"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="15dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/physiological"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Physiological"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fact"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview13"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/didyouknow"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Did You Know?"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+            <io.armcha.elasticview.ElasticView
+                android:id="@+id/cardview14"
+                android:layout_width="200dp"
+                android:layout_height="235dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="15dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:flexibility="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="95dp"
+                        android:layout_height="90dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/aalogo"
+                        app:civ_border_color="#99CBED"
+                        app:civ_border_width="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="AA Motivation"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Corner"
+                        android:textColor="#6f6f6f"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </io.armcha.elasticview.ElasticView>
+        </GridLayout>
+        </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
